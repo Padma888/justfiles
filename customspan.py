@@ -11,7 +11,7 @@ CONNECTION_STRING = "YOUR-CONNECTION-STRING"
 trace.set_tracer_provider(TracerProvider())  
 tracer = trace.get_tracer(__name__)  
   
-exporter = AzureMonitorTraceExporter(connection_string=CONNECTION_STRING)  
+exporter = AzureMonitorTraceExporter(connection_string=InstrumentationKey=931af60b-2f0a-4429-99b8-0d3cfef5a59d;IngestionEndpoint=https://canadacentral-1.in.applicationinsights.azure.com/;LiveEndpoint=https://canadacentral.livediagnostics.monitor.azure.com/;ApplicationId=e56ef1b6-a2bf-4abf-96a4-8471bfc6ba9f)  
 span_processor = BatchSpanProcessor(exporter)  
 trace.get_tracer_provider().add_span_processor(span_processor)  
   
